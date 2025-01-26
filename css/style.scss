@@ -151,6 +151,7 @@ header .nav {
                 color: $color-peach;
                 left: 5%;
             }
+
             .histryListItemDetail {
                 background-color: $color-peach;
                 left: 5%;
@@ -163,6 +164,7 @@ header .nav {
                 color: $color-pear;
                 right: 5%;
             }
+
             .histryListItemDetail {
                 background-color: $color-pear;
                 right: 5%;
@@ -175,6 +177,7 @@ header .nav {
                 color: $color-melon;
                 left: 5%;
             }
+
             .histryListItemDetail {
                 background-color: $color-melon;
                 left: 5%;
@@ -187,6 +190,7 @@ header .nav {
                 color: $color-lemon;
                 right: 5%;
             }
+
             .histryListItemDetail {
                 background-color: $color-lemon;
                 right: 5%;
@@ -199,6 +203,7 @@ header .nav {
                 color: $color-fig;
                 left: 5%;
             }
+
             .histryListItemDetail {
                 background-color: $color-fig;
                 left: 5%;
@@ -215,7 +220,6 @@ header .nav {
 
             .histryListItemTop {
                 position: absolute;
-                z-index: 9;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -225,10 +229,12 @@ header .nav {
                 border: 5px solid inherit;
                 border-radius: 15px;
                 background-color: $color-white;
+                transition: .5s;
 
                 img {
                     width: 420px;
                 }
+
                 .histryListItemTitle {
                     margin-top: 1rem;
                 }
@@ -244,7 +250,9 @@ header .nav {
                 background-color: $color-green;
                 border-radius: 15px;
                 background-color: inherit;
-                transition: 1s;
+                transition: .5s;
+                opacity: 0;
+                transform: rotateY(180deg);
 
                 p {
                     width: 100%;
@@ -252,46 +260,18 @@ header .nav {
                     font-size: 1.25rem;
                     font-weight: 700;
                     color: $color-white;
+                    line-height: 2rem;
                 }
             }
         }
-        .histryListContent:nth-child(odd):hover .histryListItemDetail{
-            left: 52%;
-            animation: .5s ease-in srideInLeft;
-        }
-        .histryListContent:nth-child(even):hover .histryListItemDetail{
-            right: 52%;
-            animation: .5s ease-in srideInRight;
-        }
 
-        
-    }
-}
-@keyframes srideInLeft {
-    0% {
-        left: 5%;
-    }
-    50%{
-        left: 52%;
-    }
-    80%{
-        left: 50%;
-    }
-    100% {
-        left: 52%;
-    }
-}
-@keyframes srideInRight {
-    0% {
-        right: 5%;
-    }
-    50%{
-        right: 52%;
-    }
-    80%{
-        right: 50%;
-    }
-    100% {
-        right: 52%;
+        .histryListContent:hover .histryListItemDetail {
+            transform: rotateY(0);
+            opacity: 1;
+        }
+        .histryListContent:hover .histryListItemTop{
+            transform: rotateY(180deg);
+            transition: .5s;
+        }
     }
 }

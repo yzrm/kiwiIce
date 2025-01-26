@@ -70,6 +70,13 @@ header .nav {
 /*-------------
     Main Top 
 -------------*/
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #top {
   width: 100%;
   height: 100dvh;
@@ -116,56 +123,67 @@ header .nav {
 -------------*/
 #histry {
   width: 80%;
-  background-color: red;
 }
 #histry .histryList .histryListContent:nth-child(1) .histryListItemTop {
   border: 5px solid #F48FB1;
   color: #F48FB1;
+  left: 5%;
 }
 #histry .histryList .histryListContent:nth-child(1) .histryListItemDetail {
   background-color: #F48FB1;
+  left: 5%;
 }
 #histry .histryList .histryListContent:nth-child(2) .histryListItemTop {
   border: 5px solid #94BC18;
   color: #94BC18;
+  right: 5%;
 }
 #histry .histryList .histryListContent:nth-child(2) .histryListItemDetail {
   background-color: #94BC18;
+  right: 5%;
 }
 #histry .histryList .histryListContent:nth-child(3) .histryListItemTop {
   border: 5px solid #B7D389;
   color: #B7D389;
+  left: 5%;
 }
 #histry .histryList .histryListContent:nth-child(3) .histryListItemDetail {
   background-color: #B7D389;
+  left: 5%;
 }
 #histry .histryList .histryListContent:nth-child(4) .histryListItemTop {
   border: 5px solid #FAD841;
   color: #FAD841;
+  right: 5%;
 }
 #histry .histryList .histryListContent:nth-child(4) .histryListItemDetail {
   background-color: #FAD841;
+  right: 5%;
 }
 #histry .histryList .histryListContent:nth-child(5) .histryListItemTop {
   border: 5px solid #993430;
   color: #993430;
+  left: 5%;
 }
 #histry .histryList .histryListContent:nth-child(5) .histryListItemDetail {
   background-color: #993430;
+  left: 5%;
 }
 #histry .histryList .histryListContent {
   position: relative;
-  width: 500px;
+  width: 100%;
   height: 380px;
   border-radius: 15px;
-  margin: 10px 0;
+  margin: 50px 0;
 }
 #histry .histryList .histryListContent .histryListItemTop {
+  position: absolute;
+  z-index: 9;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 500px;
   height: 380px;
   border: 5px solid inherit;
   border-radius: 15px;
@@ -179,16 +197,15 @@ header .nav {
 }
 #histry .histryList .histryListContent .histryListItemDetail {
   position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
+  display: flex;
   justify-self: center;
   align-items: center;
-  width: 100%;
+  width: 500px;
   height: 380px;
   background-color: #C1DBA1;
   border-radius: 15px;
   background-color: inherit;
+  transition: 1s;
 }
 #histry .histryList .histryListContent .histryListItemDetail p {
   width: 100%;
@@ -196,4 +213,41 @@ header .nav {
   font-size: 1.25rem;
   font-weight: 700;
   color: #FFFEFF;
+}
+#histry .histryList .histryListContent:nth-child(odd):hover .histryListItemDetail {
+  left: 52%;
+  animation: 0.5s ease-in srideInLeft;
+}
+#histry .histryList .histryListContent:nth-child(even):hover .histryListItemDetail {
+  right: 52%;
+  animation: 0.5s ease-in srideInRight;
+}
+
+@keyframes srideInLeft {
+  0% {
+    left: 5%;
+  }
+  50% {
+    left: 52%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 52%;
+  }
+}
+@keyframes srideInRight {
+  0% {
+    right: 5%;
+  }
+  50% {
+    right: 52%;
+  }
+  80% {
+    right: 50%;
+  }
+  100% {
+    right: 52%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,1 +1,50 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  list-style: none;
+  text-decoration: none;
+  font-family: "Anuphan", serif;
+}
+
+body {
+  position: relative;
+  background-color: #D0A05D;
+}
+
+/*-------------
+    Header 
+-------------*/
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30px;
+  right: 2%;
+  height: 80px;
+  padding: 0 36px;
+  background: #FFFEFF;
+  border-radius: 50px;
+}
+
+/*-------------
+    Nav 
+-------------*/
+header .nav {
+  width: 580px;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navListContent a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.navListContent a:hover {
+  color: #C1DBA1;
+  transition: 0.2s;
+}/*# sourceMappingURL=style.css.map */

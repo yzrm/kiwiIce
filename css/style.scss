@@ -375,3 +375,44 @@ header .nav {
         }
     }
 }
+/*-------------
+    Massage
+-------------*/
+#message {
+    width: 80%;
+    color: $color-white;
+
+    .messageList {
+        .messageListContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            img {
+                height: 550px;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+
+            .messageItem {
+                h3 {
+                    line-height: 4rem;
+                }
+                p {
+                    font-weight: 700;
+                    line-height: 2rem;
+                }
+            }
+
+        }
+        .messageListContent:nth-child(odd) {
+            .messageItem {
+                text-align: right;
+            }
+            img {
+            transform: scale(-1,1);
+            }
+        }
+    }
+}

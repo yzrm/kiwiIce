@@ -322,4 +322,37 @@ header .nav {
   margin-top: 4rem;
   line-height: 2rem;
   font-weight: 700;
+}
+
+/*-------------
+    Massage
+-------------*/
+#message {
+  width: 80%;
+  color: #FFFEFF;
+}
+#message .messageList .messageListContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#message .messageList .messageListContent img {
+  height: 550px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#message .messageList .messageListContent .messageItem h3 {
+  line-height: 4rem;
+}
+#message .messageList .messageListContent .messageItem p {
+  font-weight: 700;
+  line-height: 2rem;
+}
+#message .messageList .messageListContent:nth-child(odd) .messageItem {
+  text-align: right;
+}
+#message .messageList .messageListContent:nth-child(odd) img {
+  transform: scale(-1, 1);
 }/*# sourceMappingURL=style.css.map */

@@ -14,6 +14,11 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  font-size: 8rem;
+  font-weight: bold;
+}
+
 h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -25,6 +30,10 @@ p {
 
 .accentColor {
   color: #C1DBA1;
+}
+
+.smallText {
+  font-size: 4rem;
 }
 
 /*-------------
@@ -239,4 +248,33 @@ header .nav {
 #histry .histryList .histryListContent:hover .histryListItemTop {
   transform: rotateY(180deg);
   transition: 0.5s;
+}
+
+/*-------------
+    Lead
+-------------*/
+#lead {
+  width: 80%;
+}
+#lead .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 940px;
+  background: #FFFEFF;
+  border: solid 5px #C1DBA1;
+  border-radius: 45px;
+}
+#lead .wrapper img {
+  width: 960px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#lead .wrapper .leadText {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

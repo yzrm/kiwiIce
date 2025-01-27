@@ -96,16 +96,32 @@ header .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-
     .topView {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+        display: block;
         width: 100%;
         height: 100%;
-        background-color: red;
+
+        .topViewVideoBg {
+            width: 100%;
+            height: 100%;
+
+            .topVideo {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
 
         .siteTitleBg {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
             display: flex;
             justify-content: center;
             align-items: center;

@@ -85,14 +85,29 @@ header .nav {
   align-items: center;
 }
 #top .topView {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  display: block;
   width: 100%;
   height: 100%;
-  background-color: red;
+}
+#top .topView .topViewVideoBg {
+  width: 100%;
+  height: 100%;
+}
+#top .topView .topViewVideoBg .topVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #top .topView .siteTitleBg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
   align-items: center;

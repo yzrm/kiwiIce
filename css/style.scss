@@ -115,6 +115,7 @@ header .nav {
         display: block;
         width: 100%;
         height: 100%;
+        overflow: hidden;
 
         .topViewVideoBg {
             width: 100%;
@@ -325,7 +326,7 @@ header .nav {
         border-radius: 45px;
 
         img {
-            width: 960px;
+            width: 80%;
             object-fit: contain;
         }
 
@@ -436,6 +437,7 @@ header .nav {
 #timeline {
     position: relative;
     width: 100%;
+    height: 100vh;
     height: 915px;
     background: $color-pink;
     overflow: hidden;
@@ -463,17 +465,22 @@ header .nav {
             }
         }
         .timelineBg {
-            width: 100%;
-            overflow-x: scroll;
+            width: 3000px;
+            height: 100%;
+            background-color: red;
+
         .timelineList {
             position: absolute;
             top: 0;
             left: 0;
             z-index: 99;
             display: flex;
+            width: 3000px;
             height: 100%;
             justify-content: center;
             align-items: center;
+            overflow-X: scroll;
+
 
             .timelineListContent {
                 display: flex;
@@ -486,16 +493,20 @@ header .nav {
                 background: $color-white;
                 border: 1px solid $color-black;
                 border-radius: 35px;
+                color: $color-gray;
+
 
                 .timelineListItem {
                     position: relative;
                     width: 80%;
-                    height: 80%;
+                    height: 90%;
 
                     .startTime {
                         position: absolute;
                         top: 0;
                         left: 0;
+                        font-size: 2rem;
+                        font-weight: 700;
                     }
 
                     .timelineItemTitle {
@@ -503,16 +514,46 @@ header .nav {
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
+                        font-size: 3rem;
                     }
 
                     .timelineItemDiscript {
                         position: absolute;
+                        height: 120px;
                         bottom: 0;
                         left: 0;
+                        font-weight: 700;
                     }
                 }
+                .pototsuku::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: block;
+                    width: 64px;
+                    height: 64px;
+                    background: url(/src/img/pototuku_logo.png);
+                    background-size: contain;
+                }
+            }
+            .timelineListContent:hover {
+                background: $color-brown;
+                color: $color-white;
             }
         }
+        .timelineList::after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -99;
+            top: 50%;
+            left: 5%;
+            width: 80%;
+            height: 5px;
+            border-bottom: dotted 5px $color-white;
+        }
+
     }
 }
 /*-------------

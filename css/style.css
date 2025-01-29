@@ -45,6 +45,7 @@ p {
 -------------*/
 .header {
   position: absolute;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,6 +138,7 @@ header .nav {
 }
 .main #top .topView .siteTitleBg {
   position: absolute;
+  z-index: 99;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -146,6 +148,8 @@ header .nav {
   width: 100%;
   height: 230px;
   background: #FFFEFF;
+  opacity: 0;
+  transition: 0.5s;
 }
 .main #top .topView .siteTitleBg .siteTitle {
   display: block;
@@ -163,6 +167,9 @@ header .nav {
 .main #top .topView .siteTitleBg .siteTitle p:last-child {
   top: 8.5rem;
   right: 5px;
+}
+.main #top .topView .siteTitleBg:hover {
+  opacity: 1;
 }
 .main #histry {
   width: 80%;
@@ -318,6 +325,8 @@ header .nav {
 .main #concept .wrapper img {
   width: 250px;
   height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 3px solid #D0A05D;
   border-radius: 50%;
   background-color: #FFFEFF;
@@ -428,9 +437,10 @@ header .nav {
 }
 .main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem .timelineItemTitle {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  transform: translateX(-50%);
   font-size: 3rem;
 }
 .main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem .timelineItemDiscript {
@@ -474,6 +484,7 @@ header .nav {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 .main #map .subTitle {
   color: #FFFEFF;
@@ -492,9 +503,11 @@ header .nav {
   align-items: center;
 }
 .main #map .mapImages img {
-  width: 280px;
-  height: 500px;
-  background: red;
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 35px;
+  border: 5px solid #C1DBA1;
 }
 
 /*-------------

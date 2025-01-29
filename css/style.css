@@ -84,31 +84,49 @@ header .nav {
     Main Top 
 -------------*/
 .main {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /*-------------
+      Histry
+  -------------*/
+  /*-------------
+      Lead
+  -------------*/
+  /*-------------
+      Concept
+  -------------*/
+  /*-------------
+      Massage
+  -------------*/
+  /*-------------
+      Timeline
+  -------------*/
+  /*-------------
+      Map
+  -------------*/
 }
-
-#top {
+.main #top {
   width: 100%;
   height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#top .topView {
+.main #top .topView {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-#top .topView .topViewVideoBg {
+.main #top .topView .topViewVideoBg {
   width: 100%;
   height: 100%;
 }
-#top .topView .topViewVideoBg .topVideo {
+.main #top .topView .topViewVideoBg .topVideo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -117,7 +135,7 @@ header .nav {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#top .topView .siteTitleBg {
+.main #top .topView .siteTitleBg {
   position: absolute;
   top: 50%;
   left: 0;
@@ -129,83 +147,79 @@ header .nav {
   height: 230px;
   background: #FFFEFF;
 }
-#top .topView .siteTitleBg .siteTitle {
+.main #top .topView .siteTitleBg .siteTitle {
   display: block;
   position: relative;
 }
-#top .topView .siteTitleBg .siteTitle p {
+.main #top .topView .siteTitleBg .siteTitle p {
   font-family: "Anuphan", serif;
   position: absolute;
   font-size: 1.5rem;
   font-weight: bold;
 }
-#top .topView .siteTitleBg .siteTitle p:first-child {
+.main #top .topView .siteTitleBg .siteTitle p:first-child {
   left: 5px;
 }
-#top .topView .siteTitleBg .siteTitle p:last-child {
+.main #top .topView .siteTitleBg .siteTitle p:last-child {
   top: 8.5rem;
   right: 5px;
 }
-
-/*-------------
-    Histry
--------------*/
-#histry {
+.main #histry {
   width: 80%;
 }
-#histry .histryList .histryListContent:nth-child(1) .histryListItemTop {
+.main #histry .histryList .histryListContent:nth-child(1) .histryListItemTop {
   border: 5px solid #F48FB1;
   color: #F48FB1;
   left: 5%;
 }
-#histry .histryList .histryListContent:nth-child(1) .histryListItemDetail {
+.main #histry .histryList .histryListContent:nth-child(1) .histryListItemDetail {
   background-color: #F48FB1;
   left: 5%;
 }
-#histry .histryList .histryListContent:nth-child(2) .histryListItemTop {
+.main #histry .histryList .histryListContent:nth-child(2) .histryListItemTop {
   border: 5px solid #94BC18;
   color: #94BC18;
   right: 5%;
 }
-#histry .histryList .histryListContent:nth-child(2) .histryListItemDetail {
+.main #histry .histryList .histryListContent:nth-child(2) .histryListItemDetail {
   background-color: #94BC18;
   right: 5%;
 }
-#histry .histryList .histryListContent:nth-child(3) .histryListItemTop {
+.main #histry .histryList .histryListContent:nth-child(3) .histryListItemTop {
   border: 5px solid #B7D389;
   color: #B7D389;
   left: 5%;
 }
-#histry .histryList .histryListContent:nth-child(3) .histryListItemDetail {
+.main #histry .histryList .histryListContent:nth-child(3) .histryListItemDetail {
   background-color: #B7D389;
   left: 5%;
 }
-#histry .histryList .histryListContent:nth-child(4) .histryListItemTop {
+.main #histry .histryList .histryListContent:nth-child(4) .histryListItemTop {
   border: 5px solid #FAD841;
   color: #FAD841;
   right: 5%;
 }
-#histry .histryList .histryListContent:nth-child(4) .histryListItemDetail {
+.main #histry .histryList .histryListContent:nth-child(4) .histryListItemDetail {
   background-color: #FAD841;
   right: 5%;
 }
-#histry .histryList .histryListContent:nth-child(5) .histryListItemTop {
+.main #histry .histryList .histryListContent:nth-child(5) .histryListItemTop {
   border: 5px solid #993430;
   color: #993430;
   left: 5%;
 }
-#histry .histryList .histryListContent:nth-child(5) .histryListItemDetail {
+.main #histry .histryList .histryListContent:nth-child(5) .histryListItemDetail {
   background-color: #993430;
   left: 5%;
 }
-#histry .histryList .histryListContent {
+.main #histry .histryList .histryListContent {
   position: relative;
   width: 100%;
   height: 380px;
   border-radius: 15px;
   margin: 50px 0;
 }
-#histry .histryList .histryListContent .histryListItemTop {
+.main #histry .histryList .histryListContent .histryListItemTop {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -218,13 +232,13 @@ header .nav {
   background-color: #FFFEFF;
   transition: 0.5s;
 }
-#histry .histryList .histryListContent .histryListItemTop img {
+.main #histry .histryList .histryListContent .histryListItemTop img {
   width: 420px;
 }
-#histry .histryList .histryListContent .histryListItemTop .histryListItemTitle {
+.main #histry .histryList .histryListContent .histryListItemTop .histryListItemTitle {
   margin-top: 1rem;
 }
-#histry .histryList .histryListContent .histryListItemDetail {
+.main #histry .histryList .histryListContent .histryListItemDetail {
   position: absolute;
   display: flex;
   justify-self: center;
@@ -238,7 +252,7 @@ header .nav {
   opacity: 0;
   transform: rotateY(180deg);
 }
-#histry .histryList .histryListContent .histryListItemDetail p {
+.main #histry .histryList .histryListContent .histryListItemDetail p {
   width: 100%;
   text-align: center;
   font-size: 1.25rem;
@@ -246,22 +260,18 @@ header .nav {
   color: #FFFEFF;
   line-height: 2rem;
 }
-#histry .histryList .histryListContent:hover .histryListItemDetail {
+.main #histry .histryList .histryListContent:hover .histryListItemDetail {
   transform: rotateY(0);
   opacity: 1;
 }
-#histry .histryList .histryListContent:hover .histryListItemTop {
+.main #histry .histryList .histryListContent:hover .histryListItemTop {
   transform: rotateY(180deg);
   transition: 0.5s;
 }
-
-/*-------------
-    Lead
--------------*/
-#lead {
+.main #lead {
   width: 80%;
 }
-#lead .wrapper {
+.main #lead .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,22 +282,18 @@ header .nav {
   border: solid 5px #C1DBA1;
   border-radius: 45px;
 }
-#lead .wrapper img {
+.main #lead .wrapper img {
   width: 80%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#lead .wrapper .leadText {
+.main #lead .wrapper .leadText {
   margin-top: 2rem;
   text-align: center;
   font-size: 1.25rem;
   font-weight: 700;
 }
-
-/*-------------
-    Concept
--------------*/
-#concept {
+.main #concept {
   position: relative;
   width: 100%;
   height: 1065px;
@@ -295,7 +301,7 @@ header .nav {
   text-align: center;
   overflow: hidden;
 }
-#concept .wrapper {
+.main #concept .wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -309,68 +315,58 @@ header .nav {
   background: #C1DBA1;
   border-radius: 45%;
 }
-#concept .wrapper img {
+.main #concept .wrapper img {
   width: 250px;
   height: 250px;
   border: 3px solid #D0A05D;
   border-radius: 50%;
   background-color: #FFFEFF;
 }
-#concept .wrapper h3 {
+.main #concept .wrapper h3 {
   margin-top: 4rem;
   line-height: 4rem;
 }
-#concept .wrapper p {
+.main #concept .wrapper p {
   margin-top: 4rem;
   line-height: 2rem;
   font-weight: 700;
 }
-
-/*-------------
-    Massage
--------------*/
-#message {
+.main #message {
   width: 80%;
   color: #FFFEFF;
 }
-#message .messageList .messageListContent {
+.main #message .messageList .messageListContent {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-#message .messageList .messageListContent img {
+.main #message .messageList .messageListContent img {
   height: 550px;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#message .messageList .messageListContent .messageItem h3 {
+.main #message .messageList .messageListContent .messageItem h3 {
   line-height: 4rem;
 }
-#message .messageList .messageListContent .messageItem p {
+.main #message .messageList .messageListContent .messageItem p {
   font-weight: 700;
   line-height: 2rem;
 }
-#message .messageList .messageListContent:nth-child(odd) .messageItem {
+.main #message .messageList .messageListContent:nth-child(odd) .messageItem {
   text-align: right;
 }
-#message .messageList .messageListContent:nth-child(odd) img {
+.main #message .messageList .messageListContent:nth-child(odd) img {
   transform: scale(-1, 1);
 }
-
-/*-------------
-    Timeline
--------------*/
-#timeline {
-  position: relative;
+.main #timeline {
   width: 100%;
   height: 100vh;
-  height: 915px;
   background: #F5609A;
   overflow: hidden;
 }
-#timeline .timelineTitle {
+.main #timeline .timelineTitle {
   position: absolute;
   z-index: 9;
   width: 100%;
@@ -380,34 +376,32 @@ header .nav {
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #FFFEFF;
 }
-#timeline .timelineTitle .timelineTitleTop {
+.main #timeline .timelineTitle .timelineTitleTop {
   position: absolute;
   top: 0;
   left: 0;
 }
-#timeline .timelineTitle .timelineTitleBottom {
+.main #timeline .timelineTitle .timelineTitleBottom {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-#timeline .timelineBg {
-  width: 3000px;
+.main #timeline .timelineBg {
+  width: 2000px;
   height: 100%;
-  background-color: red;
 }
-#timeline .timelineBg .timelineList {
+.main #timeline .timelineBg .timelineList {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
   display: flex;
-  width: 3000px;
+  width: 2000px;
   height: 100%;
   justify-content: center;
   align-items: center;
-  overflow-X: scroll;
 }
-#timeline .timelineBg .timelineList .timelineListContent {
+.main #timeline .timelineBg .timelineList .timelineListContent {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -420,33 +414,33 @@ header .nav {
   border-radius: 35px;
   color: #C2B5AF;
 }
-#timeline .timelineBg .timelineList .timelineListContent .timelineListItem {
+.main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem {
   position: relative;
   width: 80%;
   height: 90%;
 }
-#timeline .timelineBg .timelineList .timelineListContent .timelineListItem .startTime {
+.main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem .startTime {
   position: absolute;
   top: 0;
   left: 0;
   font-size: 2rem;
   font-weight: 700;
 }
-#timeline .timelineBg .timelineList .timelineListContent .timelineListItem .timelineItemTitle {
+.main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem .timelineItemTitle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3rem;
 }
-#timeline .timelineBg .timelineList .timelineListContent .timelineListItem .timelineItemDiscript {
+.main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem .timelineItemDiscript {
   position: absolute;
   height: 120px;
   bottom: 0;
   left: 0;
   font-weight: 700;
 }
-#timeline .timelineBg .timelineList .timelineListContent .pototsuku::after {
+.main #timeline .timelineBg .timelineList .timelineListContent .pototsuku::after {
   content: "";
   position: absolute;
   top: 0;
@@ -457,11 +451,11 @@ header .nav {
   background: url(/src/img/pototuku_logo.png);
   background-size: contain;
 }
-#timeline .timelineBg .timelineList .timelineListContent:hover {
+.main #timeline .timelineBg .timelineList .timelineListContent:hover {
   background: #D0A05D;
   color: #FFFEFF;
 }
-#timeline .timelineBg .timelineList::after {
+.main #timeline .timelineBg .timelineList::after {
   content: "";
   display: block;
   position: absolute;
@@ -472,35 +466,32 @@ header .nav {
   height: 5px;
   border-bottom: dotted 5px #FFFEFF;
 }
-
-/*-------------
-    Map
--------------*/
-#map {
+.main #map {
   width: 80%;
+  height: 100%;
   margin: 100px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-#map .subTitle {
+.main #map .subTitle {
   color: #FFFEFF;
   margin: 100px 0;
 }
-#map .mapDiscript {
+.main #map .mapDiscript {
   font-weight: 700;
   font-size: 1.25rem;
   color: #FFFEFF;
   margin-bottom: 100px;
 }
-#map .mapImages {
+.main #map .mapImages {
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
 }
-#map .mapImages img {
+.main #map .mapImages img {
   width: 280px;
   height: 500px;
   background: red;

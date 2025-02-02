@@ -1,3 +1,5 @@
+'use strict';
+
 const container = document.querySelector('.timeline');
 const slides = document.querySelectorAll('.timelineListContent');
 const containerWidth = container.offsetWidth;

@@ -351,10 +351,10 @@ header .nav {
   width: 100%;
 }
 .main #message .messageList .messageListContent img {
-  height: 550px;
-  aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 38%;
+  padding: 8%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .main #message .messageList .messageListContent .messageItem h3 {
   line-height: 4rem;

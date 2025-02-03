@@ -1,5 +1,8 @@
 'use strict';
 
+
+
+//　横スクロール制御
 const container = document.querySelector('.timeline');
 const slides = document.querySelectorAll('.timelineListContent');
 const containerWidth = container.offsetWidth;
@@ -16,25 +19,3 @@ gsap.to( slides, { // slidesに対して以下のアニメーションを設定
       invalidateOnRefresh: true, // リサイズ時の調整でtrueにしておく
   }
 })
-
-//Video制御
-
-const loadMovie = document.getElementById("topVideo");
-
-// ページ読み込み完了時に動画の再生し終了後にフェードアウトさせる
-window.addEventListener("load", function () {
-    loadMovie.play();
-    loadMovie.addEventListener("ended", function () {
-        let startTime = new Date() - 0;
-        let time = 500;
-        setInterval(function () {
-            let elapsedTime = new Date() - startTime;
-            if (elapsedTime > time) {
-                clearInterval();
-                elapsedTime = time;
-                loadMovie.remove();
-            }
-            loadMovie.style.opacity = 1 - elapsedTime / time;
-        }, 10);
-    });
-});

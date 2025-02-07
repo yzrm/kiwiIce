@@ -54,6 +54,30 @@ p {
 }
 
 /*-------------
+    Loading 
+-------------*/
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: red;
+    transition: all 0.5s linear;
+ 
+    &.loaded {
+        opacity: 0;
+        visibility: hidden;
+      }
+}
+
+/*-------------
     Header 
 -------------*/
 .header {
@@ -127,6 +151,7 @@ header .nav {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    width: 100dvw;
                     height: 100%;
                     object-fit: cover;
                 }
@@ -176,7 +201,7 @@ header .nav {
         }
     }
 
-    /*-------------
+/*-------------
     Histry
 -------------*/
     #histry {
@@ -315,7 +340,7 @@ header .nav {
         }
     }
 
-    /*-------------
+/*-------------
     Lead
 -------------*/
     #lead {
@@ -394,7 +419,7 @@ header .nav {
         }
     }
 
-    /*-------------
+/*-------------
     Massage
 -------------*/
     #message {
@@ -408,12 +433,27 @@ header .nav {
                 align-items: center;
                 width: 100%;
 
-                img {
+                .iceCream {
                     width: 38%;
                     padding: 8%;
                     object-fit: contain;
+                    animation: floating infinite ease-in-out 3s;
+
+                    &.inversion {
+                        animation: floating2 infinite ease-in-out 3s;
+                    }
+                }
+                @keyframes floating {
+                    0% {transform: translateY(5%); }
+                    50% {transform: translateY(-5%); }
+                    100% {transform: translateY(5%); }
                 }
 
+                @keyframes floating2 {
+                    0% {transform: translateY(-5%) }
+                    50% {transform: translateY(5%) }
+                    100% {transform: translateY(-5%) }
+                }
                 .messageItem {
                     h3 {
                         line-height: 4rem;
@@ -439,7 +479,7 @@ header .nav {
         }
     }
 
-    /*-------------
+/*-------------
     Timeline
 -------------*/
     #timeline {
@@ -567,7 +607,7 @@ header .nav {
         }
     }
 
-    /*-------------
+/*-------------
     Map
 -------------*/
     #map {

@@ -458,7 +458,7 @@ header .nav {
   display: block;
   width: 64px;
   height: 64px;
-  background: url(/src/img/pototuku_logo.png);
+  background: url(/src/img/logo/pototuku_logo.png);
   background-size: contain;
 }
 .main #timeline .timelineBg .timelineList .timelineListContent:hover {

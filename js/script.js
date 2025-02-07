@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 //　横スクロール制御
 const container = document.querySelector('.timeline');
 const slides = document.querySelectorAll('.timelineListContent');

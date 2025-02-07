@@ -4,7 +4,7 @@ $color-black: #000000;
 $color-gray: #C2B5AF;
 $color-brown: #D0A05D;
 $color-pink: #F5609A;
-$color-green: #C1DBA1;
+$color-green: #c1dba1;
 $color-peach: #F48FB1;
 $color-pear: #94BC18;
 $color-melon: #B7D389;
@@ -68,15 +68,33 @@ p {
     width: 100dvw;
     height: 100dvh;
     overflow: hidden;
-    background-color: red;
+    background-color: $color-gray;
     transition: all 0.5s linear;
  
     &.loaded {
         opacity: 0;
         visibility: hidden;
-      }
+    }
+    
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 60px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side,#afffa1 90%,#69ff7b00);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 50%;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+      20%{background-position:0%   0%, 50%  50%,100%  50%}
+      40%{background-position:0% 100%, 50%   0%,100%  50%}
+      60%{background-position:0%  50%, 50% 100%,100%   0%}
+      80%{background-position:0%  50%, 50%  50%,100% 100%}
+  }
 }
-
 /*-------------
     Header 
 -------------*/

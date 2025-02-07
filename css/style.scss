@@ -165,17 +165,6 @@ header .nav {
 }
 
 /*-------------
-    Main 
--------------*/
-.main {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/*-------------
     Top 
 -------------*/
 #top {
@@ -256,7 +245,8 @@ header .nav {
     Histry
 -------------*/
 #histry {
-    width: 80%;
+    width: 100%;
+    padding: 0 10%;
 
     .histryList {
         .histryListContent:nth-child(1) {
@@ -395,7 +385,8 @@ header .nav {
     Lead
 -------------*/
 #lead {
-    width: 80%;
+    width: 100%;
+    padding: 0 10%;
     margin-top: 100px;
 
     .wrapper {
@@ -430,8 +421,9 @@ header .nav {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: 20% 0;
+    padding: 0 10%;
     border-top: 5px solid $color-white ;
     border-bottom: 5px solid $color-white ;
     color: $color-white;
@@ -520,7 +512,8 @@ header .nav {
     Massage
 -------------*/
 #message {
-    width: 80%;
+    width: 100%;
+    padding: 0 10%;
     margin: 100px 0;
     color: $color-white;
 
@@ -599,136 +592,137 @@ header .nav {
     Timeline
 -------------*/
 #timeline {
-    // position: relative;
+    position: relative;
     width: 100%;
     height: 100dvh;
     background: $color-pink;
     overflow: hidden;
 
-    // .timelineTitle {
-    //     position: absolute;
-    //     z-index: 9;
-    //     width: 100%;
-    //     height: 100%;
-    //     color: transparent;
-    //     font-size: 16rem;
-    //     -webkit-text-stroke-width: 5px;
-    //     -webkit-text-stroke-color: $color-white;
+    .timelineTitle {
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        color: transparent;
+        font-size: 16rem;
+        -webkit-text-stroke-width: 5px;
+        -webkit-text-stroke-color: $color-white;
 
-    //     .timelineTitleTop {
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //     }
+        .timelineTitleTop {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-    //     .timelineTitleBottom {
-    //         position: absolute;
-    //         bottom: 0;
-    //         right: 0;
-    //     }
-    // }
+        .timelineTitleBottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
 
-    // .timelineBg {
-    //     width: 2000px;
-    //     height: 100%;
+    .timelineBg {
+        width: 100%;
+        height: 100%;
 
-    //     .timelineList {
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         z-index: 99;
-    //         display: flex;
-    //         width: 2000px;
-    //         height: 100%;
-    //         justify-content: center;
-    //         align-items: center;
-
-
-    //         .timelineListContent {
-    //             display: flex;
-    //             justify-content: center;
-    //             align-items: center;
-    //             flex-direction: column;
-    //             min-width: 300px;
-    //             height: 450px;
-    //             margin: 0 50px;
-    //             background: $color-white;
-    //             border: 1px solid $color-black;
-    //             border-radius: 35px;
-    //             color: $color-gray;
+        .timelineList {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            display: flex;
+            width: 2000px;
+            height: 100%;
+            justify-content: flex-start;
+            align-items: center;
 
 
-    //             .timelineListItem {
-    //                 position: relative;
-    //                 width: 80%;
-    //                 height: 90%;
+            .timelineListContent {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                min-width: 300px;
+                height: 450px;
+                margin: 0 50px;
+                background: $color-white;
+                border: 1px solid $color-black;
+                border-radius: 35px;
+                color: $color-gray;
 
-    //                 .startTime {
-    //                     position: absolute;
-    //                     top: 0;
-    //                     left: 0;
-    //                     font-size: 2rem;
-    //                     font-weight: 700;
-    //                 }
 
-    //                 .timelineItemTitle {
-    //                     position: absolute;
-    //                     top: 30%;
-    //                     left: 50%;
-    //                     width: 100%;
-    //                     transform: translateX(-50%);
-    //                     font-size: 3rem;
-    //                 }
+                .timelineListItem {
+                    position: relative;
+                    width: 80%;
+                    height: 90%;
 
-    //                 .timelineItemDiscript {
-    //                     position: absolute;
-    //                     height: 120px;
-    //                     bottom: 0;
-    //                     left: 0;
-    //                     font-weight: 700;
-    //                 }
-    //             }
+                    .startTime {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
 
-    //             .pototsuku::after {
-    //                 content: "";
-    //                 position: absolute;
-    //                 top: 0;
-    //                 right: 0;
-    //                 display: block;
-    //                 width: 64px;
-    //                 height: 64px;
-    //                 background: url(/src/img/logo/pototuku_logo.png);
-    //                 background-size: contain;
-    //             }
-    //         }
+                    .timelineItemTitle {
+                        position: absolute;
+                        top: 30%;
+                        left: 50%;
+                        width: 100%;
+                        transform: translateX(-50%);
+                        font-size: 3rem;
+                    }
 
-    //         .timelineListContent:hover {
-    //             background: $color-brown;
-    //             color: $color-white;
-    //         }
-    //     }
+                    .timelineItemDiscript {
+                        position: absolute;
+                        height: 120px;
+                        bottom: 0;
+                        left: 0;
+                        font-weight: 700;
+                    }
+                }
 
-    //     .timelineList::after {
-    //         content: "";
-    //         display: block;
-    //         position: absolute;
-    //         z-index: -99;
-    //         top: 50%;
-    //         left: 5%;
-    //         width: 80%;
-    //         height: 5px;
-    //         border-bottom: dotted 5px $color-white;
-    //     }
+                .pototsuku::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: block;
+                    width: 64px;
+                    height: 64px;
+                    background: url(/src/img/logo/pototuku_logo.png);
+                    background-size: contain;
+                }
+            }
 
-    // }
+            .timelineListContent:hover {
+                background: $color-brown;
+                color: $color-white;
+            }
+        }
+
+        .timelineList::after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -99;
+            top: 50%;
+            left: 5%;
+            width: 80%;
+            height: 5px;
+            border-bottom: dotted 5px $color-white;
+        }
+
+    }
 }
 
 /*-------------
     Map
 -------------*/
 #map {
-    width: 80%;
+    width: 100%;
     height: 100%;
+    padding: 0 10%;
     margin: 100px 0;
     display: flex;
     justify-content: space-around;

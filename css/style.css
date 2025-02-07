@@ -57,7 +57,6 @@ p {
   overflow: hidden;
   background-color: #C2B5AF;
   transition: all 0.5s linear;
-  /* HTML: <div class="loader"></div> */
 }
 .loading.loaded {
   opacity: 0;
@@ -66,7 +65,7 @@ p {
 .loading .loader {
   width: 60px;
   aspect-ratio: 2;
-  --_g: no-repeat radial-gradient(circle closest-side,#afffa1 90%,#69ff7b00);
+  --_g: no-repeat radial-gradient(circle closest-side, #afffa1 90%, #69ff7b00);
   background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
   background-size: 33.3333333333% 50%;
   animation: l3 1s infinite linear;
@@ -84,6 +83,24 @@ p {
   80% {
     background-position: 0% 50%, 50% 50%, 100% 100%;
   }
+}
+
+/*-------------
+    Scroll 
+-------------*/
+.element {
+  visibility: hidden;
+  transition: opacity 0.7s, visibility 0.7s, transform 0.7s, filter 0.8s;
+  transform: translateY(110px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.is-fadein {
+  visibility: visible;
+  transform: translateX(0);
+  opacity: 1;
+  filter: none;
 }
 
 /*-------------
@@ -128,7 +145,7 @@ header .nav {
 }
 
 /*-------------
-    Main Top 
+    Main 
 -------------*/
 .main {
   position: relative;
@@ -136,44 +153,30 @@ header .nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /*-------------
-      Histry
-  -------------*/
-  /*-------------
-      Lead
-  -------------*/
-  /*-------------
-      Concept
-  -------------*/
-  /*-------------
-      Massage
-  -------------*/
-  /*-------------
-      Timeline
-  -------------*/
-  /*-------------
-      Map
-  -------------*/
 }
-.main #top {
+
+/*-------------
+    Top 
+-------------*/
+#top {
   width: 100%;
   height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main #top .topView {
+#top .topView {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.main #top .topView .topViewVideoBg {
+#top .topView .topViewVideoBg {
   width: 100%;
   height: 100%;
 }
-.main #top .topView .topViewVideoBg .topVideo {
+#top .topView .topViewVideoBg .topVideo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -183,7 +186,7 @@ header .nav {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.main #top .topView .siteTitleBg {
+#top .topView .siteTitleBg {
   position: absolute;
   z-index: 99;
   top: 50%;
@@ -198,82 +201,86 @@ header .nav {
   opacity: 0;
   transition: 0.5s;
 }
-.main #top .topView .siteTitleBg .siteTitle {
+#top .topView .siteTitleBg .siteTitle {
   display: block;
   position: relative;
 }
-.main #top .topView .siteTitleBg .siteTitle p {
+#top .topView .siteTitleBg .siteTitle p {
   font-family: "Anuphan", serif;
   position: absolute;
   font-size: 1.5rem;
   font-weight: bold;
 }
-.main #top .topView .siteTitleBg .siteTitle p:first-child {
+#top .topView .siteTitleBg .siteTitle p:first-child {
   left: 5px;
 }
-.main #top .topView .siteTitleBg .siteTitle p:last-child {
+#top .topView .siteTitleBg .siteTitle p:last-child {
   top: 8.5rem;
   right: 5px;
 }
-.main #top .topView .siteTitleBg:hover {
+#top .topView .siteTitleBg:hover {
   opacity: 1;
 }
-.main #histry {
+
+/*-------------
+    Histry
+-------------*/
+#histry {
   width: 80%;
 }
-.main #histry .histryList .histryListContent:nth-child(1) .histryListItemTop {
+#histry .histryList .histryListContent:nth-child(1) .histryListItemTop {
   border: 5px solid #F48FB1;
   color: #F48FB1;
   left: 5%;
 }
-.main #histry .histryList .histryListContent:nth-child(1) .histryListItemDetail {
+#histry .histryList .histryListContent:nth-child(1) .histryListItemDetail {
   background-color: #F48FB1;
   left: 5%;
 }
-.main #histry .histryList .histryListContent:nth-child(2) .histryListItemTop {
+#histry .histryList .histryListContent:nth-child(2) .histryListItemTop {
   border: 5px solid #94BC18;
   color: #94BC18;
   right: 5%;
 }
-.main #histry .histryList .histryListContent:nth-child(2) .histryListItemDetail {
+#histry .histryList .histryListContent:nth-child(2) .histryListItemDetail {
   background-color: #94BC18;
   right: 5%;
 }
-.main #histry .histryList .histryListContent:nth-child(3) .histryListItemTop {
+#histry .histryList .histryListContent:nth-child(3) .histryListItemTop {
   border: 5px solid #B7D389;
   color: #B7D389;
   left: 5%;
 }
-.main #histry .histryList .histryListContent:nth-child(3) .histryListItemDetail {
+#histry .histryList .histryListContent:nth-child(3) .histryListItemDetail {
   background-color: #B7D389;
   left: 5%;
 }
-.main #histry .histryList .histryListContent:nth-child(4) .histryListItemTop {
+#histry .histryList .histryListContent:nth-child(4) .histryListItemTop {
   border: 5px solid #FAD841;
   color: #FAD841;
   right: 5%;
 }
-.main #histry .histryList .histryListContent:nth-child(4) .histryListItemDetail {
+#histry .histryList .histryListContent:nth-child(4) .histryListItemDetail {
   background-color: #FAD841;
   right: 5%;
 }
-.main #histry .histryList .histryListContent:nth-child(5) .histryListItemTop {
+#histry .histryList .histryListContent:nth-child(5) .histryListItemTop {
   border: 5px solid #993430;
   color: #993430;
   left: 5%;
 }
-.main #histry .histryList .histryListContent:nth-child(5) .histryListItemDetail {
+#histry .histryList .histryListContent:nth-child(5) .histryListItemDetail {
   background-color: #993430;
   left: 5%;
 }
-.main #histry .histryList .histryListContent {
+#histry .histryList .histryListContent {
   position: relative;
   width: 100%;
   height: 380px;
   border-radius: 15px;
   margin: 50px 0;
 }
-.main #histry .histryList .histryListContent .histryListItemTop {
+#histry .histryList .histryListContent .histryListItemTop {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -286,13 +293,13 @@ header .nav {
   background-color: #FFFEFF;
   transition: 0.5s;
 }
-.main #histry .histryList .histryListContent .histryListItemTop img {
+#histry .histryList .histryListContent .histryListItemTop img {
   width: 420px;
 }
-.main #histry .histryList .histryListContent .histryListItemTop .histryListItemTitle {
+#histry .histryList .histryListContent .histryListItemTop .histryListItemTitle {
   margin-top: 1rem;
 }
-.main #histry .histryList .histryListContent .histryListItemDetail {
+#histry .histryList .histryListContent .histryListItemDetail {
   position: absolute;
   display: flex;
   justify-self: center;
@@ -306,7 +313,7 @@ header .nav {
   opacity: 0;
   transform: rotateY(180deg);
 }
-.main #histry .histryList .histryListContent .histryListItemDetail p {
+#histry .histryList .histryListContent .histryListItemDetail p {
   width: 100%;
   text-align: center;
   font-size: 1.25rem;
@@ -314,40 +321,92 @@ header .nav {
   color: #FFFEFF;
   line-height: 2rem;
 }
-.main #histry .histryList .histryListContent:hover .histryListItemDetail {
+#histry .histryList .histryListContent:hover .histryListItemDetail {
   transform: rotateY(0);
   opacity: 1;
 }
-.main #histry .histryList .histryListContent:hover .histryListItemTop {
+#histry .histryList .histryListContent:hover .histryListItemTop {
   transform: rotateY(180deg);
   transition: 0.5s;
 }
-.main #lead {
+
+/*-------------
+    Lead
+-------------*/
+#lead {
   width: 80%;
+  margin-top: 100px;
 }
-.main #lead .wrapper {
+#lead .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 850px;
   background: #FFFEFF;
   border: solid 5px #c1dba1;
   border-radius: 45px;
 }
-.main #lead .wrapper img {
+#lead .wrapper img {
   width: 80%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.main #lead .wrapper .leadText {
-  margin-top: 2rem;
+#lead .wrapper .leadText {
+  margin: 2rem;
   text-align: center;
   font-size: 1.25rem;
   font-weight: 700;
 }
-.main #concept {
+
+/*-------------
+    Campaign
+-------------*/
+#campaign {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 80%;
+  margin: 20% 0;
+  border-top: 5px solid #FFFEFF;
+  border-bottom: 5px solid #FFFEFF;
+  color: #FFFEFF;
+}
+#campaign .campaignBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2%;
+  border-top: 5px dotted #FFFEFF;
+}
+#campaign .campaignBg .campaignLink {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 40%;
+}
+#campaign .campaignBg .campaignLink .campaignBanner {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: 0.5s;
+}
+#campaign .campaignBg .campaignLink .campaignBanner:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: #c1dba1 5px 5px 5px;
+}
+#campaign .campaignBg .campaingnText {
+  width: 60%;
+  padding-left: 2%;
+  font-weight: 700;
+}
+
+/*-------------
+    Concept
+-------------*/
+#concept {
   position: relative;
   width: 100%;
   height: 1065px;
@@ -355,7 +414,7 @@ header .nav {
   text-align: center;
   overflow: hidden;
 }
-.main #concept .wrapper {
+#concept .wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -369,7 +428,7 @@ header .nav {
   background: #c1dba1;
   border-radius: 45%;
 }
-.main #concept .wrapper img {
+#concept .wrapper img {
   width: 250px;
   height: 250px;
   -o-object-fit: cover;
@@ -378,33 +437,38 @@ header .nav {
   border-radius: 50%;
   background-color: #FFFEFF;
 }
-.main #concept .wrapper h3 {
+#concept .wrapper h3 {
   margin-top: 4rem;
   line-height: 4rem;
 }
-.main #concept .wrapper p {
+#concept .wrapper p {
   margin-top: 4rem;
   line-height: 2rem;
   font-weight: 700;
 }
-.main #message {
+
+/*-------------
+    Massage
+-------------*/
+#message {
   width: 80%;
+  margin: 100px 0;
   color: #FFFEFF;
 }
-.main #message .messageList .messageListContent {
+#message .messageList .messageListContent {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.main #message .messageList .messageListContent .iceCream {
+#message .messageList .messageListContent .iceCream {
   width: 38%;
   padding: 8%;
   -o-object-fit: contain;
      object-fit: contain;
   animation: floating infinite ease-in-out 3s;
 }
-.main #message .messageList .messageListContent .iceCream.inversion {
+#message .messageList .messageListContent .iceCream.inversion {
   animation: floating2 infinite ease-in-out 3s;
 }
 @keyframes floating {
@@ -429,127 +493,34 @@ header .nav {
     transform: translateY(-5%);
   }
 }
-.main #message .messageList .messageListContent .messageItem h3 {
+#message .messageList .messageListContent .messageItem h3 {
   line-height: 4rem;
 }
-.main #message .messageList .messageListContent .messageItem p {
+#message .messageList .messageListContent .messageItem p {
   font-weight: 700;
   line-height: 2rem;
 }
-.main #message .messageList .messageListContent:nth-child(odd) .messageItem {
+#message .messageList .messageListContent:nth-child(odd) .messageItem {
   text-align: right;
 }
-.main #message .messageList .messageListContent:nth-child(odd) img {
+#message .messageList .messageListContent:nth-child(odd) img {
   transform: scale(-1, 1);
 }
-.main #timeline {
+
+/*-------------
+    Timeline
+-------------*/
+#timeline {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background: #F5609A;
   overflow: hidden;
 }
-.main #timeline .timelineTitle {
-  position: absolute;
-  z-index: 9;
-  width: 100%;
-  height: 100%;
-  color: transparent;
-  font-size: 16rem;
-  -webkit-text-stroke-width: 5px;
-  -webkit-text-stroke-color: #FFFEFF;
-}
-.main #timeline .timelineTitle .timelineTitleTop {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.main #timeline .timelineTitle .timelineTitleBottom {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.main #timeline .timelineBg {
-  width: 2000px;
-  height: 100%;
-}
-.main #timeline .timelineBg .timelineList {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  display: flex;
-  width: 2000px;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.main #timeline .timelineBg .timelineList .timelineListContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-width: 300px;
-  height: 450px;
-  margin: 0 50px;
-  background: #FFFEFF;
-  border: 1px solid #000000;
-  border-radius: 35px;
-  color: #C2B5AF;
-}
-.main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem {
-  position: relative;
-  width: 80%;
-  height: 90%;
-}
-.main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem .startTime {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 2rem;
-  font-weight: 700;
-}
-.main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem .timelineItemTitle {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
-  font-size: 3rem;
-}
-.main #timeline .timelineBg .timelineList .timelineListContent .timelineListItem .timelineItemDiscript {
-  position: absolute;
-  height: 120px;
-  bottom: 0;
-  left: 0;
-  font-weight: 700;
-}
-.main #timeline .timelineBg .timelineList .timelineListContent .pototsuku::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  width: 64px;
-  height: 64px;
-  background: url(/src/img/logo/pototuku_logo.png);
-  background-size: contain;
-}
-.main #timeline .timelineBg .timelineList .timelineListContent:hover {
-  background: #D0A05D;
-  color: #FFFEFF;
-}
-.main #timeline .timelineBg .timelineList::after {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -99;
-  top: 50%;
-  left: 5%;
-  width: 80%;
-  height: 5px;
-  border-bottom: dotted 5px #FFFEFF;
-}
-.main #map {
+
+/*-------------
+    Map
+-------------*/
+#map {
   width: 80%;
   height: 100%;
   margin: 100px 0;
@@ -559,23 +530,23 @@ header .nav {
   flex-direction: column;
   text-align: center;
 }
-.main #map .subTitle {
+#map .subTitle {
   color: #FFFEFF;
   margin: 100px 0;
 }
-.main #map .mapDiscript {
+#map .mapDiscript {
   font-weight: 700;
   font-size: 1.25rem;
   color: #FFFEFF;
   margin-bottom: 100px;
 }
-.main #map .mapImages {
+#map .mapImages {
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
 }
-.main #map .mapImages img {
+#map .mapImages img {
   width: 80%;
   -o-object-fit: cover;
      object-fit: cover;

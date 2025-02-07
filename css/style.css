@@ -40,6 +40,10 @@ p {
   font-size: 4rem;
 }
 
+.show {
+  opacity: 1;
+}
+
 /*-------------
     Loading 
 -------------*/
@@ -118,6 +122,8 @@ p {
   padding: 0 36px;
   background: #FFFEFF;
   border-radius: 50px;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 /*-------------

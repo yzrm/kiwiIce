@@ -52,6 +52,9 @@ p {
 .smallText {
     font-size: 4rem;
 }
+.show {
+    opacity: 1;
+}
 
 /*-------------
     Loading 
@@ -138,6 +141,8 @@ p {
     padding: 0 36px;
     background: $color-white;
     border-radius: 50px;
+    opacity: 0;
+    transition: .5s;
 }
 
 /*-------------

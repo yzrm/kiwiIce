@@ -1,6 +1,7 @@
 'use strict';
-
-//ローディング画面制御
+//
+//ローディング制御
+//
 const loading = document.querySelector(".loading");
 
 //ページの読み込み完了時に処理を実行
@@ -65,9 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // スクロールイベントを登録
   window.addEventListener('scroll', onScroll)
+  
+
 })
 
-
+//
 // 　横スクロール制御
 //   親要素がFlexだとPINが効かない
 const container = document.querySelector('#timeline');
@@ -79,10 +82,39 @@ gsap.to( slides, { // slidesに対して以下のアニメーションを設定
    scrollTrigger: {
       trigger: container, //containerに到達したら発火
       pin: true, // ピン留をtrueにすることでcontainerの縦スクロールが止まる
-      markers: true,//デバック用のマーカーを表示
+      // markers: true,//デバック用のマーカーを表示
       scrub: 1, //スクロール当たりのアニメーションが動く時間
       end:`+=${containerWidth}`,// 横スクロールが終わる地点
       anticipatePin: 1, // ピン留のタイミング
       invalidateOnRefresh: true, // リサイズ時の調整でtrueにしておく
   }
 })
+
+
+const video = document.getElementById("topVideo");
+const title = document.getElementById("siteTitle");
+const header = document.getElementById("header")
+
+//
+//スクロールしたらヘッダーとタイトルを表示
+//
+  window.addEventListener("scroll", function() {
+
+    if (window.scrollY === 0) {
+      header.style.opacity = "0";
+      title.style.opacity = "0";
+    } else {
+      header.style.opacity = "1";
+      title.style.opacity = "1";
+    }
+  });
+
+
+//
+//Video制御
+//
+video.addEventListener("ended", function() {
+  siteTitle.style.opacity = "1";
+  header.style.opacity = "1";
+  video.play();
+});

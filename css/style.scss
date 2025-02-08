@@ -52,6 +52,7 @@ p {
 .smallText {
     font-size: 4rem;
 }
+
 .show {
     opacity: 1;
 }
@@ -109,23 +110,25 @@ p {
         }
     }
 }
+
 /*-------------
     Scroll 
 -------------*/
-.element {  
+.element {
     visibility: hidden;
-    transition: opacity 0.7s, visibility 0.7s, transform 0.7s, filter .8s ;
+    transition: opacity 0.7s, visibility 0.7s, transform 0.7s, filter .8s;
     transform: translateY(110px);
     opacity: 0;
     filter: blur(10px);
-  }
-  
-  .is-fadein {
+}
+
+.is-fadein {
     visibility: visible;
     transform: translateX(0);
     opacity: 1;
     filter: none;
-  }
+}
+
 /*-------------
     Header 
 -------------*/
@@ -418,6 +421,7 @@ header .nav {
         }
     }
 }
+
 /*-------------
     Campaign
 -------------*/
@@ -453,11 +457,13 @@ header .nav {
                 object-fit: contain;
                 transition: .5s;
             }
+
             .campaignBanner:hover {
-                transform: translate(-5px,-5px);
+                transform: translate(-5px, -5px);
                 box-shadow: #c1dba1 5px 5px 5px;
             }
         }
+
         .campaingnText {
             width: 60%;
             padding-left: 2%;
@@ -636,10 +642,11 @@ header .nav {
             left: 0;
             z-index: 99;
             display: flex;
-            width: 2000px;
+            width: 100%;
             height: 100%;
             justify-content: flex-start;
             align-items: center;
+            padding-left: 300px;
 
 
             .timelineListContent {
@@ -647,51 +654,69 @@ header .nav {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                min-width: 300px;
-                height: 450px;
+                min-width: 400px;
+                height: 500px;
                 margin: 0 50px;
                 background: $color-white;
                 border: 1px solid $color-black;
                 border-radius: 35px;
                 color: $color-gray;
+                transition: .2s;
 
 
                 .timelineListItem {
                     position: relative;
-                    width: 80%;
-                    height: 90%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    padding: 15px;
 
                     .startTime {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
                         font-size: 2rem;
                         font-weight: 700;
                     }
 
-                    .timelineItemTitle {
-                        position: absolute;
-                        top: 30%;
-                        left: 50%;
+
+                    .timelineItemimg {
                         width: 100%;
-                        transform: translateX(-50%);
-                        font-size: 3rem;
+                        padding: 0 10px;
+                        border-radius: 15px;
+                    }
+
+                    .timelineItemTitle {
+                        width: 100%;
+                        margin-bottom: 50px;
+                        font-size: 1.5rem;
+                        text-align: center;
                     }
 
                     .timelineItemDiscript {
                         position: absolute;
-                        height: 120px;
-                        bottom: 0;
+                        top: 0;
                         left: 0;
+                        z-index: 999;
+                        border-radius: 35px;
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        padding: 15px;
                         font-weight: 700;
+                        line-height: 2rem;
+                        background-color: $color-brown;
+                        transition: .2s;
                     }
                 }
 
                 .pototsuku::after {
                     content: "";
                     position: absolute;
-                    top: 0;
-                    right: 0;
+                    top: 20px;
+                    right: 20px;
                     display: block;
                     width: 64px;
                     height: 64px;
@@ -704,6 +729,10 @@ header .nav {
                 background: $color-brown;
                 color: $color-white;
             }
+
+            .timelineListContent:hover .timelineItemDiscript {
+                display: flex;
+            }
         }
 
         .timelineList::after {
@@ -712,8 +741,8 @@ header .nav {
             position: absolute;
             z-index: -99;
             top: 50%;
-            left: 5%;
-            width: 80%;
+            left: 0;
+            width: 100%;
             height: 5px;
             border-bottom: dotted 5px $color-white;
         }

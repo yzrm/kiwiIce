@@ -11,11 +11,24 @@ $color-melon: #B7D389;
 $color-lemon: #FAD841;
 $color-fig: #993430;
 
+//レスポンシブ
+$breakpoints: (
+    'sp': 'screen and (max-width: 768px)',
+    'tab': 'screen and (max-width: 960px)',
+    ) !default;
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
 
 * {
     list-style: none;
     text-decoration: none;
-    font-family: "Anuphan", "Zen Maru Gothic", serif;
+    font-family: "Anuphan",
+        "Zen Maru Gothic",
+        serif;
 }
 
 body {
@@ -26,11 +39,27 @@ body {
 h1 {
     font-size: 8rem;
     font-weight: bold;
+
+    @include media(tab) {
+        font-size: 6rem;
+    }
+
+    @include media(sp) {
+        font-size: 4rem;
+    }
 }
 
 h2 {
     font-size: 8rem;
     font-weight: bold;
+
+    @include media(tab) {
+        font-size: 4rem;
+    }
+
+    @include media(sp) {
+        font-size: 4rem;
+    }
 }
 
 h3 {
@@ -39,7 +68,8 @@ h3 {
 }
 
 p {
-    font-family: "Zen Maru Gothic", serif;
+    font-family: "Zen Maru Gothic",
+        serif;
 }
 
 .accentColor {
@@ -52,6 +82,11 @@ p {
 
 .smallText {
     font-size: 4rem;
+
+    @include media(sp) {
+        font-size: 2rem;
+    }
+
 }
 
 .show {
@@ -84,32 +119,33 @@ p {
     .loader {
         width: 60px;
         aspect-ratio: 2;
-        --_g: no-repeat radial-gradient(circle closest-side, #afffa1 90%, #69ff7b00);
-        background:
-            var(--_g) 0% 50%,
-            var(--_g) 50% 50%,
-            var(--_g) 100% 50%;
-        background-size: calc(100%/3) 50%;
-        animation: l3 1s infinite linear;
+        --_g: no-repeat radial-gradient(circle closest-side, #afffa1 90%, #69ff7b00
+        );
+    background:
+        var(--_g) 0% 50%,
+        var(--_g) 50% 50%,
+        var(--_g) 100% 50%;
+    background-size: calc(100%/3) 50%;
+    animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+    20% {
+        background-position: 0% 0%, 50% 50%, 100% 50%
     }
 
-    @keyframes l3 {
-        20% {
-            background-position: 0% 0%, 50% 50%, 100% 50%
-        }
-
-        40% {
-            background-position: 0% 100%, 50% 0%, 100% 50%
-        }
-
-        60% {
-            background-position: 0% 50%, 50% 100%, 100% 0%
-        }
-
-        80% {
-            background-position: 0% 50%, 50% 50%, 100% 100%
-        }
+    40% {
+        background-position: 0% 100%, 50% 0%, 100% 50%
     }
+
+    60% {
+        background-position: 0% 50%, 50% 100%, 100% 0%
+    }
+
+    80% {
+        background-position: 0% 50%, 50% 50%, 100% 100%
+    }
+}
 }
 
 /*-------------
@@ -154,6 +190,10 @@ p {
 -------------*/
 header .nav {
     width: 580px;
+
+    @include media(sp) {
+        width: 100%;
+    }
 }
 
 .navList {
@@ -166,6 +206,11 @@ header .nav {
     font-weight: bold;
     font-size: 1.5rem;
     color: $color-black;
+
+    @include media(sp) {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
 }
 
 .navListContent a:hover {
@@ -221,6 +266,14 @@ header .nav {
             opacity: 0;
             transition: .5s;
 
+            @include media(tab) {
+                height: 180px;
+            }
+
+            @include media(sp) {
+                height: 150px;
+            }
+
             .siteTitle {
                 display: block;
                 position: relative;
@@ -231,6 +284,10 @@ header .nav {
                     position: absolute;
                     font-size: 1.5rem;
                     font-weight: bold;
+
+                    @include media(sp) {
+                        font-size: 1rem;
+                    }
                 }
 
                 p:first-child {
@@ -240,6 +297,14 @@ header .nav {
                 p:last-child {
                     top: 8.5rem;
                     right: 5px;
+
+                    @include media(tab) {
+                        top: 6rem;
+                    }
+
+                    @include media(sp) {
+                        top: 4rem;
+                    }
                 }
             }
         }
@@ -257,17 +322,29 @@ header .nav {
     width: 100%;
     padding: 0 10%;
 
+    @include media(sp) {
+        padding: 0 5%;
+    }
+
     .histryList {
         .histryListContent:nth-child(1) {
             .histryListItemTop {
                 border: 5px solid $color-peach;
                 color: $color-peach;
                 left: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
 
             .histryListItemDetail {
                 background-color: $color-peach;
                 left: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
         }
 
@@ -276,11 +353,19 @@ header .nav {
                 border: 5px solid $color-pear;
                 color: $color-pear;
                 right: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
 
             .histryListItemDetail {
                 background-color: $color-pear;
                 right: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
         }
 
@@ -289,11 +374,19 @@ header .nav {
                 border: 5px solid $color-melon;
                 color: $color-melon;
                 left: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
 
             .histryListItemDetail {
                 background-color: $color-melon;
                 left: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
         }
 
@@ -302,11 +395,19 @@ header .nav {
                 border: 5px solid $color-lemon;
                 color: $color-lemon;
                 right: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
 
             .histryListItemDetail {
                 background-color: $color-lemon;
                 right: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
         }
 
@@ -315,11 +416,19 @@ header .nav {
                 border: 5px solid $color-fig;
                 color: $color-fig;
                 left: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
 
             .histryListItemDetail {
                 background-color: $color-fig;
                 left: 5%;
+
+                @include media(sp) {
+                    left: 0;
+                }
             }
         }
 
@@ -329,6 +438,10 @@ header .nav {
             height: 380px;
             border-radius: 15px;
             margin: 50px 0;
+
+            @include media(sp) {
+                height: 300px;
+            }
 
 
             .histryListItemTop {
@@ -344,12 +457,25 @@ header .nav {
                 background-color: $color-white;
                 transition: .5s;
 
+                @include media(sp) {
+                    width: 100%;
+                    height: 300px;
+                }
+
                 img {
                     width: 420px;
+
+                    @include media(sp) {
+                        width: 80%;
+                    }
                 }
 
                 .histryListItemTitle {
                     margin-top: 1rem;
+
+                    @include media(sp) {
+                        font-size: 1.2rem;
+                    }
                 }
             }
 
@@ -367,6 +493,11 @@ header .nav {
                 opacity: 0;
                 transform: rotateY(180deg);
 
+                @include media(sp) {
+                    width: 100%;
+                    height: 300px;
+                }
+
                 p {
                     width: 100%;
                     text-align: center;
@@ -374,6 +505,11 @@ header .nav {
                     font-weight: 700;
                     color: $color-white;
                     line-height: 2rem;
+
+                    @include media(sp) {
+                        font-size: .8rem;
+                        line-height: 1.5rem;
+                    }
                 }
             }
         }
@@ -398,20 +534,35 @@ header .nav {
     padding: 0 10%;
     margin-top: 100px;
 
+    @include media(sp) {
+        padding: 5%;
+    }
+
     .wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         width: 100%;
-
         background: $color-white;
         border: solid 5px $color-green;
         border-radius: 45px;
 
+        .subTitle {
+            @include media(sp) {
+                font-size: 2.5rem;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
         img {
             width: 80%;
             object-fit: contain;
+
+            @include media(sp) {
+                width: 90%;
+            }
         }
 
         .leadText {
@@ -419,6 +570,16 @@ header .nav {
             text-align: center;
             font-size: 1.25rem;
             font-weight: 700;
+
+            @include media(tab) {
+                font-size: 1rem;
+            }
+
+            @include media(sp) {
+                font-size: 1rem;
+                text-align: left;
+                width: 90%;
+            }
         }
     }
 }
@@ -438,6 +599,11 @@ header .nav {
     border-bottom: 5px solid $color-white ;
     color: $color-white;
 
+    @include media(sp) {
+        padding: 5%;
+    }
+
+
 
     .campaignBg {
         display: flex;
@@ -447,11 +613,19 @@ header .nav {
         padding: 2%;
         border-top: 5px dotted $color-white ;
 
+        @include media(sp) {
+            flex-direction: column;
+        }
+
         .campaignLink {
             display: flex;
             justify-content: center;
             align-items: flex-start;
             width: 40%;
+
+            @include media(sp) {
+                width: 100%;
+            }
 
             .campaignBanner {
                 width: 100%;
@@ -469,6 +643,19 @@ header .nav {
             width: 60%;
             padding-left: 2%;
             font-weight: 700;
+
+            @include media(sp) {
+                width: 100%;
+                font-size: .8rem;
+            }
+
+            .campaignSubTitle {
+                @include media(sp) {
+                    font-size: 1.8rem;
+                }
+
+            }
+
         }
     }
 }
@@ -484,6 +671,11 @@ header .nav {
     text-align: center;
     overflow: hidden;
 
+    @include media(sp) {
+        height: 800px;
+    }
+
+
     .wrapper {
         position: absolute;
         top: 50%;
@@ -494,9 +686,14 @@ header .nav {
         align-items: center;
         flex-direction: column;
         width: 150%;
-        height: 1065px;
+        height: 100%;
         background: $color-green;
         border-radius: 45%;
+
+        @include media(sp) {
+            border-radius: 35%;
+        }
+
 
         img {
             width: 250px;
@@ -505,17 +702,35 @@ header .nav {
             border: 3px solid $color-brown;
             border-radius: 50%;
             background-color: $color-white;
+
+            @include media(sp) {
+                width: 150px;
+                height: 150px;
+            }
         }
 
         h3 {
             margin-top: 4rem;
             line-height: 4rem;
+
+            @include media(sp) {
+                font-size: 1.2rem;
+                margin-top: 3rem;
+                line-height: 3rem;
+            }
         }
 
         p {
             margin-top: 4rem;
             line-height: 2rem;
             font-weight: 700;
+
+            @include media(sp) {
+                font-size: .8rem;
+                margin-top: 3rem;
+                width: 60%;
+                text-align: left;
+            }
         }
     }
 }
@@ -535,12 +750,25 @@ header .nav {
             justify-content: center;
             align-items: center;
             width: 100%;
+            position: relative;
+
+            @include media(tab) {
+                margin: 20% 0;
+            }
 
             .iceCream {
                 width: 38%;
                 padding: 8%;
                 object-fit: contain;
                 animation: floating infinite ease-in-out 3s;
+
+                @include media(sp) {
+                    position: absolute;
+                    top: 0;
+                    left: 30%;
+                    width: 50%;
+                    z-index: -9;
+                }
 
                 &.inversion {
                     animation: floating2 infinite ease-in-out 3s;
@@ -576,13 +804,26 @@ header .nav {
             }
 
             .messageItem {
+
+                @include media(sp) {
+                    padding-top: 90%;
+                }
                 h3 {
                     line-height: 4rem;
+                    @include media(sp) {
+                        font-size: 1.8rem;
+                        line-height: 3rem;
+                    }
                 }
 
                 p {
                     font-weight: 700;
                     line-height: 2rem;
+                    
+                    @include media(sp) {
+                        font-size: .8rem;
+                        line-height: 1.2rem;
+                    }
                 }
             }
 
@@ -620,6 +861,11 @@ header .nav {
         -webkit-text-stroke-width: 5px;
         -webkit-text-stroke-color: $color-white;
 
+        @include media(sp) {
+            font-size: 8rem;
+            -webkit-text-stroke-width: 2px;
+        }
+
         .timelineTitleTop {
             position: absolute;
             top: 0;
@@ -649,6 +895,10 @@ header .nav {
             align-items: center;
             padding-left: 300px;
 
+            @include media(tab) {
+                padding-left: 0;
+            }
+
 
             .timelineListContent {
                 display: flex;
@@ -664,6 +914,13 @@ header .nav {
                 color: $color-gray;
                 transition: .2s;
 
+                @include media(tab) {
+                    min-width: 300px;
+                    height: 400px;
+                }
+                @include media(sp) {
+                    margin: 0 20px;
+                }
 
                 .timelineListItem {
                     position: relative;
@@ -692,6 +949,10 @@ header .nav {
                         margin-bottom: 50px;
                         font-size: 1.5rem;
                         text-align: center;
+
+                        @include media(tab) {
+                            font-size: 1rem;
+                        }
                     }
 
                     .timelineItemDiscript {
@@ -710,6 +971,12 @@ header .nav {
                         line-height: 2rem;
                         background-color: $color-brown;
                         transition: .2s;
+
+                        
+                        @include media(tab) {
+                            font-size: .8rem;
+                            line-height: 1.5rem;
+                        }
                     }
                 }
 
@@ -765,9 +1032,17 @@ header .nav {
     flex-direction: column;
     text-align: center;
 
+    @include media(sp) {
+        margin: 50px 0 100px;
+    }   
+
     .subTitle {
         color: $color-white;
         margin: 100px 0;
+   
+        @include media(sp) {
+            margin-bottom: 50px;
+        }     
     }
 
     .mapDiscript {
@@ -775,6 +1050,11 @@ header .nav {
         font-size: 1.25rem;
         color: $color-white;
         margin-bottom: 100px;
+
+        @include media(sp) {
+            font-size: .8rem;
+            margin-bottom: 50px;
+        }
     }
 
     .mapImages {
@@ -788,6 +1068,10 @@ header .nav {
             object-fit: cover;
             border-radius: 35px;
             border: 5px solid $color-green;
+
+            @include media(sp) {
+                width: 100%;
+            }
         }
     }
 
@@ -805,6 +1089,13 @@ header .nav {
     height: 150px;
     background: $color-brown;
 
+    @include media(tab) {
+        height: 100px;
+    }
+    @include media(sp) {
+        height: 80px;
+    }
+
     .logo {
         display: flex;
         justify-content: center;
@@ -816,6 +1107,13 @@ header .nav {
         img {
             width: 210px;
             object-fit: contain;
+
+            @include media(tab) {
+                width: 150px;
+            }
+            @include media(sp) {
+                width: 80px;
+            }
         }
     }
 
@@ -824,5 +1122,13 @@ header .nav {
         font-size: 2rem;
         font-weight: 700;
         text-align: left;
+
+        @include media(sp) {
+            font-size: 1rem;
+        }
+
+        @include media(sp) {
+            font-size: .6rem;
+        }
     }
 }
